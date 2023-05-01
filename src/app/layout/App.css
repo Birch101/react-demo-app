@@ -35,3 +35,13 @@
 .ui.main.container {
   margin-top: 7em;
 }
+
+.masthead {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.masthead h1.ui.header {
+  font-size: 4em;
+}

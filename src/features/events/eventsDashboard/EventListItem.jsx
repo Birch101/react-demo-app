@@ -1,6 +1,7 @@
 import React from 'react';
 import { Segment, Item, Icon, List, Button } from 'semantic-ui-react';
 import EventListAttendee from './EventListAttendee';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 export default function EventListItem({ event, selectEvent, deleteEvent }) {
     return (
@@ -34,7 +35,7 @@ export default function EventListItem({ event, selectEvent, deleteEvent }) {
             <Segment clearing>
                 <span>{event.description}</span>
                 <Button onClick={() => deleteEvent(event.id)} color='red' floated='right'>Delete</Button>
-                <Button onClick={() => selectEvent(event)} color='teal' floated='right'>View</Button>
+                <Button as={Link} to={`/events/${event.id}`} color='teal' floated='right'>View</Button>
             </Segment>
         </Segment.Group>
     )
