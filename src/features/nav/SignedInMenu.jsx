@@ -2,11 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { Menu, Image, Dropdown } from 'semantic-ui-react';
 
-
 export default function SignedInMenu({signOut}) {
     return (
         <Menu.Item position='right'>
-            <Image avatar space='right' src='' />
+            <Image avatar space='right' src='https://randomuser.me/api/portraits/men/20.jpg' />
             <Dropdown pointing='top left' text='Bob'>
                 <Dropdown.Menu>
                     <Dropdown.Item as={Link} to='/createEvent' text='Create Event' icon='plus' />
