@@ -3,11 +3,15 @@ import { Segment, Header, Form, Button } from 'semantic-ui-react';
 import cuid from 'cuid';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { useDispatch, useSelector } from 'react-redux';
-import { createEvent, updateEvent } from '../eventActions';
+import { createEvent, listenToEvents, updateEvent } from '../eventActions';
+import { listenToEventFromFireStore } from '../../../app/firestore/firestoreService';
+import useFirestoreDoc from '../../../app/hooks/useFirestoreDoc';
 
 export default function EventForm({ match, history }) {
     const dispatch = useDispatch();
     const selectedEvent = useSelector(state => state.event.events.find(e => e.id === match.params.id));
+
+    const { loading, error } = useSelector(state => state.async);
 
     const initialValues = selectedEvent ?? {
         title: '',
@@ -29,6 +33,16 @@ export default function EventForm({ match, history }) {
         const { name, value } = e.target;
         setValues({ ...values, [name]: value });
     }
+
+    useFirestoreDoc({
+        query: () => listenToEventFromFireStore(match.params.id),
+        data: event => dispatch(listenToEvents([event])),
+        deps: [match.params.id, dispatch]
+    })
+
+    // if (loading || !event) return <LoadingComponent content='Loading event...' />
+
+    // if (error) return <Redirect to='/error' />
 
     return (
         <Segment clearing>

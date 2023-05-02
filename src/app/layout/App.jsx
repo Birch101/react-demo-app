@@ -8,22 +8,25 @@ import EventDetailedPage from '../../features/events/eventsDetailed/EventDetaile
 import EventForm from '../../features/events/eventForm/EventForm';
 import EventDashboard from '../../features/events/eventsDashboard/EventDashboards';
 import Sandbox from '../../features/sandbox/sandbox';
+import { ToastContainer } from 'react-toastify';
+import ErrorComponent from '../common/errors/errorComponent';
 
 function App() {
-  const {key} = useLocation();
+  const { key } = useLocation();
 
   return (
     <>
+      <ToastContainer position='bottom-right' />
       <Route exact path='/' component={HomePage} />
       <Route path={'/(.+)'} render={() => (
         <>
           <NavBar />
           <Container className='main'>
-
             <Route exact path='/events' component={EventDashboard} />
             <Route exact path='/sandbox' component={Sandbox} />
             <Route path='/events/:id' component={EventDetailedPage} />
-            <Route path={['/createEvent', '/manage/:id']} component={EventForm} key={key}/>
+            <Route path={['/createEvent', '/manage/:id']} component={EventForm} key={key} />
+            <Route path='/error' component={ErrorComponent}/>
           </Container>
         </>
       )} />

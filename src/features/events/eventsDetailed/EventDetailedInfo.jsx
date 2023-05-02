@@ -20,7 +20,7 @@ export default function EventDetailedInfo({event}) {
                         <Icon name="calendar" size="large" color="teal" />
                     </Grid.Column>
                     <Grid.Column width={15}>
-                        <span>{event.date}</span>
+                        {/* <span>{event.date}</span> */}
                     </Grid.Column>
                 </Grid>
             </Segment>
