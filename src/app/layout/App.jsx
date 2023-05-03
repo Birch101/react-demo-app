@@ -10,12 +10,14 @@ import EventDashboard from '../../features/events/eventsDashboard/EventDashboard
 import Sandbox from '../../features/sandbox/sandbox';
 import { ToastContainer } from 'react-toastify';
 import ErrorComponent from '../common/errors/errorComponent';
+import ModalManager from '../common/modals/modalManager';
 
 function App() {
   const { key } = useLocation();
 
   return (
     <>
+      <ModalManager />
       <ToastContainer position='bottom-right' />
       <Route exact path='/' component={HomePage} />
       <Route path={'/(.+)'} render={() => (
