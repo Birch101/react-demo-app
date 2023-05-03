@@ -34,8 +34,8 @@ export default function Sandbox() {
                 content='Decrement'
                 color='red' />
             <Button
-                name='decrement'
-                loading={loading && target === 'decrement'}
+                name='openModal'
+                loading={loading && target === 'TestModal'}
                 onClick={(e) => {
                     dispatch(() => dispatch(openModal({modalType: 'TestModal', modalProps: { data }})))
                 }}

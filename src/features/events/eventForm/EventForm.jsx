@@ -87,7 +87,7 @@ export default function EventForm({ match, history }) {
                 }}
             >
                 {({ isSubmitting, dirty, isValid }) => (
-                    <Form class='ui form'>
+                    <Form className='ui form'>
                         <Header sub color='teal' content='Event Details' />
                         <MyTextInput name='title' placeholder='Event title'></MyTextInput>
                         <MySelectInput name='category' placeholder='Category' options={categoryData}></MySelectInput>

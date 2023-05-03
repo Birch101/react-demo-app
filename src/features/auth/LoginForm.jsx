@@ -32,7 +32,7 @@ export default function LogoutForm() {
                         <MyTextInput name='password' placeholder='Password' type='password' />
                         <Button
                             loading={isSubmitting}
-                            disable={!isValid || !dirty || isSubmitting}
+                            disabled={!isValid || !dirty || isSubmitting}
                             type='submit'
                             fluid
                             size='large'
