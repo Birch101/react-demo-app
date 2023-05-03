@@ -13,6 +13,8 @@ import MyTextArea from '../../../app/common/form/MyTextArea';
 import MySelectInput from '../../../app/common/form/MySelectInput';
 import { categoryData } from '../../../app/api/categoryOptions'
 import MyDateInput from '../../../app/common/form/MyDateForm';
+import LoadingComponent from '../../../app/layout/LoadingComponent';
+import { Redirect } from 'react-router-dom';
 
 export default function EventForm({ match, history }) {
     const dispatch = useDispatch();
@@ -44,9 +46,10 @@ export default function EventForm({ match, history }) {
         deps: [match.params.id, dispatch]
     })
 
-    // if (loading || !event) return <LoadingComponent content='Loading event...' />
+    if (loading || !selectedEvent && !error)
+        return <LoadingComponent content='Loading event...' />
 
-    // if (error) return <Redirect to='/error' />
+    if (error) return <Redirect to='/error' />
 
     return (
         <Segment clearing>
