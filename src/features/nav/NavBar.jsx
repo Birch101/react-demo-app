@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
-import { Container, Menu, Button, Image } from 'semantic-ui-react';
+import { Container, Menu, Button } from 'semantic-ui-react';
 import SignedOutMenu from './SignedOutMenu';
 import SignedInMenu from './SignedInMenu';
 import { useSelector } from 'react-redux';
