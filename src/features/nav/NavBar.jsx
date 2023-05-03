@@ -12,7 +12,6 @@ export default function NavBar({ setFormOpen }) {
         <Menu inverted fixed='top'>
             <Container>
                 <Menu.Item as={NavLink} exact to='/' header>
-                    {/* <Image src="/assets/logo.png" alt="logo" size='tiny' /> */}
                     Home
                 </Menu.Item>
                 <Menu.Item as={NavLink} to='/events' name='Events' />

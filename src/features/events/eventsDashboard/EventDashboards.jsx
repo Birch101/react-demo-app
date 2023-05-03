@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { listenToEvents } from '../eventActions';
 import useFirestoreCollection from '../../../app/hooks/useFirestoreCollection';
 import { listenToEventsFromFirestore } from '../../../app/firestore/firestoreService';
+import EventListItemPlaceholder from './EventListItemPlaceholder';
+import EventFilters from './EventFilters';
 
 export default function EventDashboard() {
     const dispatch = useDispatch();
@@ -21,10 +23,16 @@ export default function EventDashboard() {
     return (
         <Grid>
             <Grid.Column width={10}>
+                {loading &&
+                    <>
+                        <EventListItemPlaceholder />
+                        <EventListItemPlaceholder />
+                    </>
+                }
                 <EventList events={events} />
             </Grid.Column>
             <Grid.Column width={6}>
-                <h2>Event Filters</h2>
+                <EventFilters />
             </Grid.Column>
         </Grid>
     )
