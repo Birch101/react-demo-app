@@ -11,6 +11,7 @@ import Sandbox from '../../features/sandbox/sandbox';
 import { ToastContainer } from 'react-toastify';
 import ErrorComponent from '../common/errors/errorComponent';
 import ModalManager from '../common/modals/modalManager';
+import AuditDashboard from '../../features/audits/AuditDashboard';
 
 function App() {
   const { key } = useLocation();
@@ -25,6 +26,7 @@ function App() {
           <NavBar />
           <Container className='main'>
             <Route exact path='/events' component={EventDashboard} />
+            <Route exact path='/audits' component={AuditDashboard} />
             <Route exact path='/sandbox' component={Sandbox} />
             <Route path='/events/:id' component={EventDetailedPage} />
             <Route path={['/createEvent', '/manage/:id']} component={EventForm} key={key} />

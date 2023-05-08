@@ -26,6 +26,10 @@ export function listenToEventsFromFirestore() {
     return db.collection('events').orderBy('date');
 }
 
+export function listenToAuditsFromFirestore() {
+    return db.collection('audits').orderBy('recordDate', 'desc');
+}
+
 export function listenToEventFromFireStore(eventId) {
     return db.collection('events').doc(eventId);
 }

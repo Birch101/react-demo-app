@@ -4,6 +4,7 @@ import 'firebase/compat/database';
 import 'firebase/compat/auth';
 import 'firebase/compat/storage';
 
+// included for demo purposes, but should not normally be checked in - account limits have been set
 const firebaseConfig = {
     apiKey: "AIzaSyBlFzugN5PUIc8xK2YZuOptMnoGqqcOD60",
     authDomain: "react-demo-c5653.firebaseapp.com",
