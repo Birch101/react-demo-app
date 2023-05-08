@@ -34,7 +34,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: .
+          path: D:\a\react-demo-app\react-demo-app\build
 
   deploy:
     runs-on: ubuntu-latest
