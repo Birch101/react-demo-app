@@ -8,11 +8,8 @@ import { format } from 'date-fns';
 
 export default function AuditDashboard() {
     const dispatch = useDispatch();
-    const [target, setTarget] = useState(null);
     const data = useSelector(state => state.test.data);
-
     const { audits } = useSelector(state => state.audit)
-    const { loading } = useSelector((state) => state.async);
 
     useFirestoreCollection({
         query: () => listenToAuditsFromFirestore(),
