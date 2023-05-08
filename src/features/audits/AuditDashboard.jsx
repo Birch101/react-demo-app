@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { listenToAuditsFromFirestore } from '../../app/firestore/firestoreService';
 import { listenToAudits } from './auditActions';
@@ -8,7 +8,6 @@ import { format } from 'date-fns';
 
 export default function AuditDashboard() {
     const dispatch = useDispatch();
-    const data = useSelector(state => state.test.data);
     const { audits } = useSelector(state => state.audit)
 
     useFirestoreCollection({

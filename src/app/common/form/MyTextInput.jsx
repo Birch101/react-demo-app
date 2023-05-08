@@ -1,6 +1,6 @@
 import { useField } from 'formik';
 import React from 'react';
-import { FormField, Input, Label } from 'semantic-ui-react';
+import { FormField, Label } from 'semantic-ui-react';
 
 export default function MyTextInput({ label, ...props }) {
     const [field, meta] = useField(props);
