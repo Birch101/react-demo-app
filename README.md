@@ -9,3 +9,9 @@ This is a simple project to allow events to be created, read, updated and delete
 
 ## Running
 To run the React application first run the 'npm install' command following by 'npm start'.
+
+## Deployment
+
+The React application is automatically deployed to this URL via yaml script included in this repository:
+
+- https://react-demo-app-cb.azurewebsites.net
