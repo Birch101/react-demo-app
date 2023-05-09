@@ -12,6 +12,6 @@ To run the React application first run the 'npm install' command following by 'n
 
 ## Deployment
 
-The React application is automatically deployed to this URL via yaml script included in this repository:
+The React application is automatically to an Azure App Service at this URL via yaml script included in this repository:
 
 - https://react-demo-app-cb.azurewebsites.net
