@@ -1,5 +1,7 @@
 # React Demo
 
+[![Build and deploy to Azure App Service](https://github.com/Birch101/react-demo-app-udemy/actions/workflows/node-build-deploy.yml/badge.svg)](https://github.com/Birch101/react-demo-app-udemy/actions/workflows/node-build-deploy.yml)
+
 ## Overview
 This is a simple project to allow events to be created, read, updated and deleted. It consists of the following parts:
 
