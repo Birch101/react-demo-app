@@ -6,7 +6,7 @@ import 'firebase/compat/storage';
 
 // included for demo purposes, but should not normally be checked in - account limits have been set
 const firebaseConfig = {
-    apiKey: "AIzaSyBlFzugN5PUIc8xK2YZuOptMnoGqqcOD60",
+    apiKey: "",
     authDomain: "react-demo-c5653.firebaseapp.com",
     projectId: "react-demo-c5653",
     storageBucket: "react-demo-c5653.appspot.com",
